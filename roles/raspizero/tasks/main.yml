@@ -119,6 +119,15 @@
       load-module module-bluetooth-discover
       .endif
 
+- name: "radio_coreがある場合は削除"
+  shell: "rm -rf radio_core"
+  args:
+    chdir: /opt
+  ignore_errors: yes
+  register: res
+- name: "デバッグ"
+  debug: var=res.stdout_lines
+
 - name: "Git Clone radio_core"
   shell: "git clone https://github.com/NABUKAT/radio_core.git"
   args:
