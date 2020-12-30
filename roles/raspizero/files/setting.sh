@@ -59,7 +59,7 @@ echo \"vol\": $vol >> /etc/bath_radio/bltspk_setting.json
 echo } >> /etc/bath_radio/bltspk_setting.json
 
 # region.txt
-echo $region > /etc/bath_radio/region.txt
+echo -n $region > /etc/bath_radio/region.txt
 
 # now_station.txt
 echo 0 > /etc/bath_radio/now_station.txt
