@@ -145,10 +145,6 @@
     job: "/sbin/reboot"
     cron_file: server_reboot
 
-- name: "サーバ再起動"
-  reboot:
-    reboot_timeout: 60
-
 - name: "サービス起動設定"
   systemd:
     name: pulseaudio
