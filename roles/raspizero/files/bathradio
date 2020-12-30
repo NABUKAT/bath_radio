@@ -1,0 +1,2 @@
+@reboot root /opt/radio_core/bathradio.sh &
+50 13 * * * root /opt/bath_radio/update.sh &
