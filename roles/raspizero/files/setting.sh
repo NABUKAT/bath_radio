@@ -13,11 +13,11 @@ stationlist=`cat /opt/radio_core/stationlist.json`
 # 現在値を表示し変更するかしないかを選択
 echo 現在設定されているBDアドレス
 echo $device
-echo -n 変更しますか？(Y/N): 
+echo -n "変更しますか？(Y/N): "
 # 変更する場合は入力受付
 read res
 if [ $res = "Y" ]; then
-  echo -n BDアドレスを入力してください: 
+  echo -n "BDアドレスを入力してください: "
   read device
 fi
 
@@ -25,11 +25,11 @@ fi
 # 現在値を表示し変更するかしないかを選択
 echo 現在の音量設定
 echo $vol
-echo -n 変更しますか？(Y/N): 
+echo -n "変更しますか？(Y/N): "
 # 変更する場合は入力受付
 read res
 if [ $res = "Y" ]; then
-  echo -n 音量を入力してください: 
+  echo -n "音量を入力してください: "
   read vol
 fi
 
@@ -37,7 +37,7 @@ fi
 # 現在値を表示し変更するかしないかを選択
 echo 現在の地域設定
 echo $region
-echo -n 変更しますか？(Y/N): 
+echo -n "変更しますか？(Y/N): "
 # 変更する場合は入力受付
 read res
 if [ $res = "Y" ]; then
@@ -45,7 +45,7 @@ if [ $res = "Y" ]; then
   echo ---------
   echo $stationlist | jq -r 'keys[]'
   echo ---------
-  echo -n リストから地域を選択してください: 
+  echo -n "リストから地域を選択してください: "
   read region
 fi
 
