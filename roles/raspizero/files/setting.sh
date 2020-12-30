@@ -60,7 +60,7 @@ echo } >> /etc/bath_radio/bltspk_setting.json
 echo $region > /etc/bath_radio/region.txt
 
 # now_station.txt
-station=`echo $stationlist | jq '.$region.[0]'`
+station=`echo $stationlist | jq -r '.'$region'[0]'`
 echo $station > /etc/bath_radio/now_station.txt
 
 exit 0
