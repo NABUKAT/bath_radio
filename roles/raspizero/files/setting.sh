@@ -64,4 +64,8 @@ echo -n $region > /etc/bath_radio/region.txt
 # now_station.txt
 echo 0 > /etc/bath_radio/now_station.txt
 
+# 完了メッセージ
+echo "設定が完了しました。"
+echo "サーバ再起動を実行してください。(sudo reboot)"
+
 exit 0
